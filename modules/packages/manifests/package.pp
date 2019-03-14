@@ -1,4 +1,4 @@
-class package_install($version) {
+class packages::package_install($version) {
     package { 'python':
         ensure => $version,
     }
