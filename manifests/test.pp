@@ -1,5 +1,5 @@
 class packages::package_install($version) {
-    package { 'mysql-server':
+    package { 'firefox':
         ensure => $version,
     }
 }
