@@ -11,6 +11,6 @@ node default{
 	}
 	
 	class { packages::package_install:
-		version => ''5.7,
+		version => '5.7',
 	}
 }
