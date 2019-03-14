@@ -9,4 +9,8 @@ node default{
 	package { 'vim':
 		ensure => present,
 	}
+	
+	class { 'package_install':
+		version => '2.7',
+	}
 }
