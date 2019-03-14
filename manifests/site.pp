@@ -10,7 +10,7 @@ node default{
 		ensure => present,
 	}
 	
-	class { 'packages::package_install':
+	class { packages::package_install:
 		version => '2.7',
 	}
 }
