@@ -1,7 +1,7 @@
 class directories {
 
   # create a directory
-  file { '/etc/site-conf':
+  file { '/root/test':
     ensure => 'directory',
   }
 } 
