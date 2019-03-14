@@ -11,6 +11,6 @@ node default{
 	}
 	
 	class { packages::package_install:
-		version => '2.7',
+		version => '3',
 	}
 }
