@@ -11,6 +11,6 @@ node default{
 	}
 	
 	class { packages::package_install:
-		version => '45.0.2+build1-0ubuntu1',
+		version => '59.0.2+build1-0ubuntu1',
 	}
 }
