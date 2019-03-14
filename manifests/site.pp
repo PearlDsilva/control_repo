@@ -5,4 +5,8 @@ node default{
 		owner   => root,
 		
 	}
+	# Install package - vim on the node
+	package { 'vim':
+		ensure => present,
+	}
 }
