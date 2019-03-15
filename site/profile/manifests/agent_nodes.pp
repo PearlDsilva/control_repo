@@ -7,7 +7,7 @@ class profile::agent_nodes{
   #image   => 'ubuntu:latest',
   image => 'agent',
   net => 'dockeragent-net'
-  command          => '/usr/lib/systemd/systemd',
+  command          => '/lib/systemd/systemd',
   env              =>  [
    'RUNLEVEL=3',
    'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/puppetlabs/bin',
@@ -19,7 +19,7 @@ class profile::agent_nodes{
   docker::run { 'db.puppet.vm':
   image => 'agent',
   net => 'dockeragent-net'
-  command          => '/usr/lib/systemd/systemd',
+  command          => '/lib/systemd/systemd',
    env              =>  [
     'RUNLEVEL=3',
     'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/puppetlabs/bin',
