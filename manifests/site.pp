@@ -1,5 +1,5 @@
 node default{
-	package { requires => Exec['apt_update'] }
+	
 	include ::docker 
 	file { '/root/README':
 		ensure => file,
