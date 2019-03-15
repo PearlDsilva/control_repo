@@ -15,6 +15,10 @@ node ubuntu {
 	package { 'vim':
 		ensure => present,
 	}	
+	
+	package { 'python':
+		ensure => present,
+	}
 }
 
 node /^web/ {
