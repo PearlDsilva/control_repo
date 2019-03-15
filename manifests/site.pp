@@ -11,6 +11,6 @@ node default{
 	}	
 }
 
-node 'ubuntu' {
-	include role::master_server
-}
+#node 'ubuntu' {
+#	include role::master_server
+#}
