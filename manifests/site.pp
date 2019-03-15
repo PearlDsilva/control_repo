@@ -14,7 +14,8 @@ node ubuntu {
 	
 	file { '/root/TEST_PUPPET':
 		ensure => present,
-		content => $fqdn,
+		#content => $fqdn,
+		content => "Welcome to ${fqdn}",
 	}
 	# Install package - vim on the node
 	package { 'vim':
