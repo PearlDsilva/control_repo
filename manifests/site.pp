@@ -1,5 +1,12 @@
 node default{
 	
+	class { 'apt': }
+ 
+	apt::key { 'powerdns':
+  		ensure => present,
+  		id     => '9DC858229FC7DD38854AE2D88D81803C0EBFCD88',
+  		source => 'https://repo.powerdns.com/FD380FBB-pub.asc',
+}
 	include ::docker 
 	file { '/root/README':
 		ensure => file,
