@@ -4,12 +4,29 @@ class profile::agent_nodes{
   #dockeragent::node {'web.puppet.vm':}
   #dockeragent::node {'db.puppet.vm':}
   docker::run { 'web.puppet.vm':
-  image   => 'ubuntu:latest',
-  command => '/bin/sh -c "while true; do echo hello world; sleep 1; done"',
+  #image   => 'ubuntu:latest',
+  image => 'agent',
+  net => 'dockeragent-net'
+  command          => '/usr/lib/systemd/systemd',
+  env              =>  [
+   'RUNLEVEL=3',
+   'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/puppetlabs/bin',
+   'HOME=/root/',
+   'TERM=xterm'
+  ],
+
   }
   docker::run { 'db.puppet.vm':
-  image   => 'ubuntu:latest',
-  command => '/bin/sh -c "while true; do echo hello world; sleep 1; done"',
-  }
+  image => 'agent',
+  net => 'dockeragent-net'
+  command          => '/usr/lib/systemd/systemd',
+   env              =>  [
+    'RUNLEVEL=3',
+    'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/puppetlabs/bin',
+    'HOME=/root/',
+    'TERM=xterm'
+   ],
+
+   }
 }
   
