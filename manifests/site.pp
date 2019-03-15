@@ -11,6 +11,11 @@ node ubuntu {
 		owner   => root,
 		
 	}
+	
+	file { '/root/TEST_PUPPET':
+		ensure => present,
+		content => $fqdn,
+	}
 	# Install package - vim on the node
 	package { 'vim':
 		ensure => present,
