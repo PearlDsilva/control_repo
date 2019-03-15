@@ -1,11 +1,11 @@
 node default{
 
-	Apt::Source <| |> -> Class['apt::update'] -> Package <| |>
+	#Apt::Source <| |> -> Class['apt::update'] -> Package <| |>
 	#include ::docker	
-	include 'docker'
-	docker::image { 'ubuntu':
-  		image_tag => 'trusty'
-	}	
+	#include 'docker'
+	#docker::image { 'ubuntu':
+  	#	image_tag => 'trusty'
+	#}	
 	file { '/root/README':
 		ensure => file,
 		content => 'this is a README',
