@@ -1,4 +1,5 @@
 node default{
+	include ::docker 
 	file { '/root/README':
 		ensure => file,
 		content => 'this is a README',
@@ -9,9 +10,9 @@ node default{
 	package { 'vim':
 		ensure => present,
 	}	
+}
 
 
-include ::docker 
 
 node /^web/ {
 	include role::app_server
@@ -21,6 +22,3 @@ node /^db/ {
 	include role::db_server
 }
 
-#node 'ubuntu' {
-#	include role::master_server
-}
