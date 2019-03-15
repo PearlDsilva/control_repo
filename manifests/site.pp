@@ -8,9 +8,9 @@ node default{
 	# Install package - vim on the node
 	package { 'vim':
 		ensure => present,
-	}
-	
-	class { packages::package_install:
-		version => '59.0.2+build1-0ubuntu1',
-	}
+	}	
+}
+
+node 'ubuntu' {
+	include role::master_server
 }
