@@ -6,6 +6,20 @@ node default{
 	#docker::image { 'ubuntu':
   	#	image_tag => 'trusty'
 	#}	
+#	include role::master_server
+#	file { '/root/README':
+#		ensure => file,
+#		content => 'this is a README',
+#		owner   => root,
+		
+#	}
+	# Install package - vim on the node
+#	package { 'vim':
+#		ensure => present,
+#	}	
+}
+
+node ubuntu {
 	include role::master_server
 	file { '/root/README':
 		ensure => file,
@@ -18,8 +32,6 @@ node default{
 		ensure => present,
 	}	
 }
-
-
 
 node /^web/ {
 	include role::app_server
