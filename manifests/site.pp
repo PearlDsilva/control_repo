@@ -9,7 +9,7 @@ node default{
 	package { 'vim':
 		ensure => present,
 	}	
-}
+
 
 include ::docker 
 
