@@ -13,5 +13,5 @@ mod "puppetlabs/stdlib", '4.9.0'
 mod "puppetlabs/concat", '2.1.0'
 mod 'puppetlabs-apt', '6.0.0'
 mod "pltraining/dockeragent"
-mod "garethr/docker"
+#mod "garethr/docker"
 mod "puppetlabs/docker"
