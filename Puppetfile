@@ -9,8 +9,8 @@ mod 'puppet/nginx'
 #mod 'garethr-docker', '4.1.1'
 
 #mod 'puppetlabs-docker', '3.5.0'
-mod "puppetlabs/stdlib"
-mod "puppetlabs/concat"
-mod 'puppetlabs-apt'
+mod "puppetlabs/stdlib", '4.9.0'
+mod "puppetlabs/concat", '2.1.0'
+mod 'puppetlabs-apt', '6.0.0'
 mod "pltraining/dockeragent"
 mod "garethr/docker"
