@@ -14,7 +14,7 @@ node default{
     		require => Exec['apt_update'],
   	}
 
-	include ::docker 
+	#include ::docker 
 	file { '/root/README':
 		ensure => file,
 		content => 'this is a README',
