@@ -1,7 +1,8 @@
 node default{
 
-	
-	include 'docker'
+	Apt::Source <| |> -> Class['apt::update'] -> Package <| |>
+	include ::docker	
+	#include 'docker'
 	file { '/root/README':
 		ensure => file,
 		content => 'this is a README',
