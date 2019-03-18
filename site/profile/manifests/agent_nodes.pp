@@ -7,7 +7,7 @@ class profile::agent_nodes{
   #image   => 'ubuntu:latest',
   image => 'puppet/puppet-agent-ubuntu',
   net => 'dockeragent-net',
-  command => '"while true; do echo 'which bash'; sleep 1; done"',
+  command => '"while true; do echo `which bash`; sleep 1; done"',
   env =>  [
    'RUNLEVEL=3',
    'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/puppetlabs/bin',
