@@ -7,7 +7,7 @@ class profile::agent_nodes{
   #image   => 'ubuntu:latest',
   image => 'puppet/puppet-agent-ubuntu',
   net => 'dockeragent-net',
-  command => '/bin/sh -c "while true; do echo hello world; sleep 1; done"',
+  command => '/bin/bash -c "while true; do echo hello world; sleep 1; done"',
   env =>  [
    'RUNLEVEL=3',
    'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/puppetlabs/bin',
@@ -19,7 +19,7 @@ class profile::agent_nodes{
   docker::run { 'db.puppet.vm':
   image => 'puppet/puppet-agent-ubuntu',
   net => 'dockeragent-net',
-  command => '/bin/sh -c "while true; do echo hello world; sleep 1; done"',
+  command => '/bin/bash -c "while true; do echo hello world; sleep 1; done"',
   env =>  [
     'RUNLEVEL=3',
     'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/puppetlabs/bin',
