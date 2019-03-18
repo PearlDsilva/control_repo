@@ -5,7 +5,7 @@ class profile::agent_nodes{
   #dockeragent::node {'db.puppet.vm':}
   docker::run { 'web.puppet.vm':
   #image   => 'ubuntu:latest',
-  image => 'agent',
+  image => 'puppet/puppet-agent-docker',
   net => 'dockeragent-net',
   command => 'sleep 100000',
   env =>  [
