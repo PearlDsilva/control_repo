@@ -35,3 +35,6 @@ node /^db/ {
 	include role::db_server
 }
 
+node test.vm {
+	include role::minecraft_server
+}
