@@ -7,7 +7,7 @@ class profile::agent_nodes{
   #image   => 'ubuntu:latest',
   image => 'puppet/puppet-agent-ubuntu',
   net => 'dockeragent-net',
-  #command => 'sleep 100000',
+  command => 'puppet agent --server=ubuntu -t',
   env =>  [
    'RUNLEVEL=3',
    'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/puppetlabs/bin',
