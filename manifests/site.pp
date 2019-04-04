@@ -5,6 +5,7 @@ node default{
 
 node ubuntu {
 	include role::master_server
+        hiera_include('classes-debian')
 	file { '/root/README':
 		ensure => file,
 		content => 'this is a README',
