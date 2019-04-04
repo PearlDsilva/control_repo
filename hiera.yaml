@@ -9,6 +9,6 @@ hierarchy:
   - name: "Nodes"
     paths:
       - "nodes/Debian.yaml"
-      - "nodes/%{::osfamily}.yaml"
-      - "common.yaml"
+      #- "nodes/%{::osfamily}.yaml"
+      #- "common.yaml"
 
