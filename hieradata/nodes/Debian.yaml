@@ -1,6 +1,6 @@
 classes-debian:
-        - package
+        - package1
 
-package::package:
+package1::package:
         vim:
                 ensure: present
