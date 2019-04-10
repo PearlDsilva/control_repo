@@ -10,10 +10,10 @@ node ubuntu {
  }
 
 node default {
-  include('classes-debian')
+  
   #include firewalld
   #class { ::firewalld::ports: }
-  #$packages = hiera(classes-debian)
+  $packages = lookup('firewalld::ports')
   
   #include $package
 
