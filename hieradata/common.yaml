@@ -3,6 +3,11 @@ classes-redhat:
   - sudo 
   - sudo::configs
   - package
+  
+package::package:
+  wget:
+    ensure: latest
+    
 firewalld::ports:
   'Rubrik RBS 12800':
     ensure: present
