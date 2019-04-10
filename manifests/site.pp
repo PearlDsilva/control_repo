@@ -8,3 +8,8 @@ node ubuntu {
    # ensure => installed,
    # }
  }
+
+node default {
+  hiera_include(classes-debian)
+
+}
