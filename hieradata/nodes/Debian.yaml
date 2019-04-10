@@ -16,3 +16,8 @@ firewalld::ports:
     zone: public
     port: 443
     protocol: 'tcp'
+  'Open port 12803  for testing':
+    ensure: present
+    zone: public
+    port: 12803
+    protocol: 'tcp'    
