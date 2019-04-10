@@ -10,6 +10,9 @@ node ubuntu {
  }
 
 node default {
-  hiera_include(classes-debian)
+  #hiera_include(classes-debian)
+  $packages = hiera(classes-debian)
+  
+  include $package
 
 }
