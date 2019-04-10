@@ -12,6 +12,7 @@ node ubuntu {
 node default {
   #include(classes-debian)
   include firewalld
+  class { firewalld::ports}
   #$packages = hiera(classes-debian)
   
   #include $package
