@@ -1,7 +1,9 @@
+
 classes-debian:
         - firewalld
         - package
 
+motd::message: 'Happy Testing'
 package:
         vim:
                 ensure: present
