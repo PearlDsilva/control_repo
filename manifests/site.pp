@@ -10,7 +10,8 @@ node ubuntu {
  }
 
 node default {
-  include(classes-debian)
+  #include(classes-debian)
+  class { firewalld: }
   #$packages = hiera(classes-debian)
   
   #include $package
