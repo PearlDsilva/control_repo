@@ -1,0 +1,11 @@
+classes-redhat:
+  - firewalld
+  - sudo 
+  - sudo::configs
+  - package
+firewalld::ports:
+  'Rubrik RBS 12800':
+    ensure: present
+    zone: public
+    port: 12800
+    protocol: 'tcp' 
