@@ -1,4 +1,5 @@
 classes-debian:
+        - firewalld
         - package
 
 package:
