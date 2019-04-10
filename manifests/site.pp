@@ -1,3 +1,3 @@
 node ubuntu {
-  hiera_include(redhat-classes)
+  hiera_include(classes-debian)
   }
