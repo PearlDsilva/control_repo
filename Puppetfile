@@ -15,3 +15,5 @@ mod 'puppetlabs-apt', '6.0.0'
 mod "pltraining/dockeragent"
 #mod "garethr/docker"
 mod "puppetlabs/docker",'3.5.0'
+mod 'crayfishx-firewalld'
+mod 'igromik-package'
