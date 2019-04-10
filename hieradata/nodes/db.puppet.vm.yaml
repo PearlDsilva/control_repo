@@ -1,0 +1,10 @@
+classes-debian:
+        - firewalld
+        - package
+        
+firewalld::ports:
+  'Open port 80 for jenkins console':
+    ensure: present
+    zone: public
+    port: 80
+    protocol: 'tcp'
