@@ -14,7 +14,7 @@ node default {
   #include firewalld
   #class { ::firewalld::ports: }
   #$packages = lookup('firewalld::ports')
-  lookup('debian-classes').include
+  #lookup('debian-classes').include
   
   #include $package
 
