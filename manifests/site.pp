@@ -7,6 +7,10 @@ node ubuntu {
   #package { $packages:
    # ensure => installed,
    # }
+     case $:osfamily {
+        'Debian' : { notify { "Debian":} }
+        'RedHat' : { notify {"RedHat":}}
+  }
  }
 
 node default {
